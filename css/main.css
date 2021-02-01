@@ -412,7 +412,8 @@ h2 {
 .list-about-item img {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: cover;
 }
 
 .list-about-item:after {
@@ -451,6 +452,47 @@ h2 {
 
 .list-about-background {
 	background-color: white;
+}
+
+#footer {
+	background-color: #C8A35F;
+}
+
+#footer > div {
+	max-width: 1120px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 10px;
+	display: flex;
+	font-size: 0.875rem;
+}
+
+#footer > div > div:first-child {
+	display: flex;
+	width: 50%;
+}
+
+#footer > div > div:first-child img {
+	display: block;
+}
+
+#footer > div > div:first-child > div:last-child {
+	padding-left: 30px;
+}
+
+#footer > div > div:first-child > div:last-child a {
+	color: black;
+}
+
+#footer > div > div:last-child {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#footer > div > div:last-child > div:last-child {
+	align-self: flex-end;
+	color: black;
 }
 
 
@@ -508,6 +550,10 @@ h2 {
 	}
 
 	#services {
+		max-width: 800px;
+		padding: 0 20px;
+	}
+	#about-company {
 		max-width: 800px;
 		padding: 0 20px;
 	}

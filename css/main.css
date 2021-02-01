@@ -211,7 +211,6 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	margin: 10px 0;
-
 }
 
 .about > a:hover {
@@ -352,6 +351,84 @@ h2 {
 	background-color: white;
 	z-index: 1;
 }
+
+/*about-company"*/
+#about-company {
+	max-width: 1120px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.about1 {
+	padding: 80px 0;
+	z-index: 1;
+}
+
+
+#about-company > div:first-child {
+	position: absolute;
+	width: 33%;
+	background-color: #393F47;
+	top: 0;
+	left: 33%;
+	height: 100%;
+}
+
+#about-company > div:nth-child(2) {
+	width: 40%;
+}	
+
+#about-company > div:nth-child(3) {
+	padding: 80px 0px 80px 30px;
+	width: 60%;
+	z-index: 1;
+
+}
+
+.list-about {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+}
+
+.list-about li {
+	width: 33%;
+	padding: 0;
+}
+
+.list-about-item {
+	display: block;
+	position: relative;
+}
+
+.list-about-item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.list-about-item:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #D3D3D3;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.list-about-item:hover:after {
+	opacity: 0.3;
+}
+
 
 
 

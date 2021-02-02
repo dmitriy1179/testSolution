@@ -1,4 +1,5 @@
-const jumpUp = () => {
+const jumpUp = (event) => {
+  event.stopPropagation()
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       window.scroll(0, 0);
       setTimeout(jumpUp, 10);

@@ -30,6 +30,7 @@ body {
 
 #header {
 	width: 100%;
+	position: relative;
 }
 
 /*contact*/
@@ -174,7 +175,7 @@ body {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 15px;
 }
 
 #main > div:nth-child(2) > div > div {
@@ -302,7 +303,7 @@ h2 {
 	max-width: 1120px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 15px;
 }
 .services-list {
 	display: flex;
@@ -362,7 +363,7 @@ h2 {
 	max-width: 1120px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 10px;
+	padding: 0 15px;
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -429,10 +430,11 @@ h2 {
 	background: #D3D3D3;
 	opacity: 0;
 	transition: all 0.3s;
+	opacity: 0.4;
 }
 
 .list-about-item:hover:after {
-	opacity: 0.5;
+	opacity: 0;
 }
 
 .list-about-item > div > p:nth-child(2) {
@@ -466,35 +468,35 @@ h2 {
 	max-width: 1120px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 50px 10px;
+	padding: 50px 15px;
 	display: flex;
 	font-size: 0.875rem;
+	align-items: center;
 }
 
 #footer > div > div:first-child {
-	display: flex;
-	width: 50%;
+	width: 15%;
 }
 
 #footer > div > div:first-child img {
 	display: block;
 }
 
-#footer > div > div:first-child > div:last-child {
+#footer > div > div:nth-child(2) {
+	width: 35%;
 	padding-left: 30px;
 }
 
-#footer > div > div:first-child > div:last-child a {
+#footer > div > div:nth-child(2) a {
 	color: black;
 }
 
-#footer > div > div:last-child {
-	width: 50%;
-	display: flex;
-	justify-content: space-between;
+#footer > div > div:nth-child(3) {
+	width: 40%;
+	padding-left: 30px;
 }
 
-#footer > div > div:last-child > div:last-child {
+#footer > div > div:last-child {
 	align-self: flex-end;
 	color: black;
 }
@@ -503,15 +505,17 @@ h2 {
 
 
 
-
-
-
-
-
-
 @media (max-width: 991px) {
 	html {
 		font-size: 14px;
+	}
+	#header > div > div {
+		max-width: 800px;
+		padding: 16px 20px;
+	}
+	#header > nav {
+		max-width: 800px;
+		padding: 27px 20px;
 	}
 	#main > section > div:first-child {
 		max-width: 720px;
@@ -530,29 +534,24 @@ h2 {
 		max-width: 800px;
 		padding: 0 20px;
 	}
-		
 	#slideEl > label:nth-child(1):after {
 		margin-top: 6px;
 		left: -60px
 	}	
-	
 	#slideEl > label:nth-child(1):before {
 		width: 50px;
 		margin-top: 9px;
 		left: -60px
 	}	
-	
 	#slideEl > label:nth-child(3):after {
   	margin-top: 6px;
 		right: -70px
 	}	
-
 	#slideEl > label:nth-child(3):before {
 		width: 50px;
 		margin-top: 9px;
 		right: -70px
 	}
-
 	#services {
 		max-width: 800px;
 		padding: 0 20px;
@@ -562,28 +561,308 @@ h2 {
 		padding: 0 20px;
 	}
 	#footer > div {
+		max-width: 800px;
 		padding: 50px 20px;
 	}
-
-
-
+	#footer > div > div:nth-child(2) {
+		width: 45%;
+	}
 }
 
 @media (max-width: 767px) {
 	html {
 		font-size: 12px;
 	}
+	#header > nav {
+		max-width: 600px;
+		flex-direction: column;
+	}
+	#header > nav > div:first-child > div:first-child:after {
+		display: none;
+	}
+	#header:after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		border: 1px solid #F2F2F2;
+		bottom: 65px;
+	}
+	#header > nav > ul {
+		padding-top: 50px;
+		justify-content: space-around;
+	}
+	#main > section {
+		padding: 90px 0 50px;
+	}
 	#main > section > div:first-child {
-		max-width: 550px;
+		max-width: 500px;
+	}
+	#main > section > div:first-child > h1 {
+		font-size: 3rem;;
+	}
+	#main > section > div:first-child > p {
+		font-size: 1rem;
+		padding: 25px 70px 35px;
+	}
+	#main > section > div:last-child > img {
+		padding-top: 50px
 	}
 	#main > div:nth-child(2) > div {
-		max-width: 690px;
-		padding: 0 10px;
+		max-width: 600px;
+	}
+	.about {
+		padding: 50px 0;
+	}
+	.line {
+		height: 2px;
+	}
+	h2 {
+		margin-top: 20px;
+		font-size: 2rem;
+	}
+	.about > p {
+		padding: 20px 0;
+	}
+	.about > a {
+  	width: 150px;
+		height: 30px;
+		margin: 10px 0;
+	}
+	#slideEl {
+		width: 120%;
+		height: 45%;
+		position: absolute;
+		top: 130px;
+		left: 50px
+	}
+	#slideEl > label:nth-child(1):after {
+		border-left: 2px solid #C8A35F;
+		border-bottom: 2px solid #C8A35F;
+		margin-top: 4px;
+		left: -40px
+	}	
+	#slideEl > label:nth-child(1):before {
+		border-bottom: 2px solid #C8A35F;
+		width: 30px;
+		margin-top: 8px;
+		left: -40px
+	}	
+	#slideEl > label:nth-child(3):after {
+		border-right: 2px solid #C8A35F;
+		border-top: 2px solid #C8A35F;
+		margin-top: 4px;
+		right: -40px
+	}	
+	#slideEl > label:nth-child(3):before {
+		border-bottom: 2px solid #C8A35F;
+		width: 30px;
+		margin-top: 8px;
+		right: -40px
+	}
+	#services {
+		max-width: 600px;
+	}
+	.services-list {
+		margin-top: 20px;
+	}
+	.services-list-item > div:first-child {
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+	.services-list-item > div:last-child {
+		margin-bottom: 20px;
+		font-size: 1rem;
+	}
+	#about-company {
+		max-width: 600px;
+	}
+	.about1 {
+		padding: 20px 0;
+	}
+	#about-company > div:nth-child(3) {
+		padding: 20px 0px 30px 30px;
+	}
+	.list-about li {
+		width: 50%;
+	}
+	.list-about-item {
+		height: 100px;
+	}
+	.list-about-item > div > h1 {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+	#footer > div {
+		max-width: 600px;
+		padding: 20px 30px;
+	}
+	#footer > div > div:nth-child(2) {
+		width: 60%;
+		padding-left: 20px;
+	}
+	#footer > div > div:nth-child(3) {
+		width: 30%;
+		padding: 0 20px;
 	}
 }
 
 @media (max-width: 575px) {
+	#main > section {
+		padding: 50px 0 30px;
+	}
+	#main > section > div:first-child {
+		max-width: 430px;
+		padding-top: 25px
+	}
+	#main > section > div:first-child > h1 {
+		font-size: 2.5rem;
+	}
+	#main > section > div:first-child > p {
+		padding: 25px 50px;
+	}
+	#main > section > div:last-child > img {
+		padding-top: 30px
+	}
+	.about {
+		padding: 30px 0;
+	}
+	.about > a {
+		width: 120px;
+		height: 30px;
+	}
+	#slideEl > label:nth-child(1) {
+		top: 90%;
+		right: -31%;
+	}
+	#slideEl > label:nth-child(1):after {
+		display: none;
+	}	
+	#slideEl > label:nth-child(1):before {
+		display: none;
+	}	
+	#slideEl > label:nth-child(3) {
+		top: -3%;
+		right: -27%;
+	}
+	#slideEl > label:nth-child(3):after {
+		display: none;
+	}	
+	#slideEl > label:nth-child(3):before {
+		display: none;
+	}
+	.services-list-item > div:last-child {
+		font-size: 0.875rem;
+	}	
+	#about-company > div:nth-child(2) {
+		width: 45%;
+		padding-top: 20px;
+	}	
+	#about-company > div:nth-child(3) {
+		width: 55%;
+		padding-top: 25px;;
+	}
+	#footer > div {
+		font-size: 0.75rem;
+	}
+	#footer > div {
+		flex-wrap: wrap;
+	}
+	#footer > div > div:nth-child(2) {
+		width: 55%
+	}
+	#footer > div > div:nth-child(3) {
+		width: 30%;
+	}
+	#footer > div > div:last-child {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
 }
 
 @media (max-width: 479px) {
+	#header > div > div {
+		padding: 10px 10px;
+	}
+	.vertical > li {
+		margin: 0 5px;
+	}
+	#header > nav {
+  padding: 10px 7px;
+}
+	#header > nav > ul {
+		padding-top: 20px;
+		font-size: 0.75rem;;
+	}
+	#header:after {
+    bottom: 35px;
+	}
+	#main > section {
+    padding: 30px 0 20px;
+}
+	#main > section > div:first-child {
+    max-width: 250px;
+    padding-top: 25px;
+	}
+	#main > section > div:first-child > h1 {
+    font-size: 2rem;
+	}
+	#main > section > div:first-child > p {
+    padding: 15px 20px;
+    font-size: 0.875rem;
+	}
+	h2 {
+		font-size: 1.5rem
+	}
+	.about > p {
+		font-size: 0.875rem
+	}
+	#slideEl {
+    width: 125%;
+    height: 45%;
+    top: 100px;
+    left: 20px;
+	}
+	#slideEl > label:nth-child(1) {
+		right: -40%;
+		font-size: 0.75rem;
+	}
+	#slideEl > label:nth-child(3) {
+		right: -35%;
+		font-size: 0.75rem;
+	}
+	.services-list li {
+		width: 50%;
+	}
+	#about-company {
+		flex-direction: column;
+	}	
+	#about-company > div:nth-child(2) {
+    width: 100%;
+		padding-top: 20px;
+		text-align: justify;
+	}
+	#about-company > div:nth-child(3) {
+    width: 100%;
+    padding: 10px 10px 30px;
+	}
+	#footer > div {
+    max-width: 600px;
+		padding: 20px 20px;
+	}
+	#footer > div > div:first-child {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	#footer > div > div:nth-child(2) {
+		width: 100%;
+		padding-top: 10px;
+	}
+	#footer > div > div:nth-child(3) {
+    width: 100%;
+	}
+	#footer > div > div:last-child {
+		padding-top: 15px;
+  }
 }

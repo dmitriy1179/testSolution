@@ -90,6 +90,17 @@ const SliderСomponent = (function() {
 attachEvent("click", SliderСomponent.nextSlide, document.querySelector("#nextButton"))
 attachEvent("click", SliderСomponent.prevSlide, document.querySelector("#prevButton"))
 
+function initMap() {
+  const location = { lat: 49.98577607, lng: 36.22865885 };
+  const map = new google.maps.Map(document.querySelector("#googleMap"), {
+    zoom: 9,
+    center: location,
+  });
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+}
 
 
 

@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.57;
 	font-weight: 400;
 }
@@ -149,6 +149,7 @@ body {
 	text-align: center;
 	font-size: 4rem;
 	display: block;
+	font-weight: 700;
 }
 
 #main > section > div:first-child > p {
@@ -198,6 +199,7 @@ body {
 h2 {
 	margin-top: 40px;
 	font-size: 2.7rem;
+	font-weight: 700;
 }
 
 .about > p {
@@ -315,20 +317,20 @@ h2 {
 	padding: 0;
 }
 
-.services-list li a {
+.services-list-item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	border: 1px solid #2F343A;
 }
 
-.services-list li a div span {
+.services-list-item div span {
 	display: block;
 	font-size: 2rem;
 	transform: rotate(-45deg);
 }	
 
-.services-list li a > div:first-child {
+.services-list-item > div:first-child {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -338,8 +340,10 @@ h2 {
 	margin-bottom: 23px;
 }
 
-.services-list li a > div:last-child {
+.services-list-item > div:last-child {
 	margin-bottom: 35px;
+	font-size: 1.125rem;
+	font-weight: 700;
 }	
 
 .services-list li:hover {
@@ -368,7 +372,6 @@ h2 {
 	padding: 80px 0;
 	z-index: 1;
 }
-
 
 #about-company > div:first-child {
 	position: absolute;
@@ -441,6 +444,7 @@ h2 {
 .list-about-item > div > h1 {
 	text-align: center;
 	font-size: 4rem;
+	font-weight: 700;
 	color: black
 }
 
@@ -557,6 +561,10 @@ h2 {
 		max-width: 800px;
 		padding: 0 20px;
 	}
+	#footer > div {
+		padding: 50px 20px;
+	}
+
 
 
 }

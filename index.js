@@ -1,14 +1,28 @@
 const jumpUp = (event) => {
-  if (document.querySelector("#upbutton").style.display == "block") {
-    event.stopPropagation()
+  event.stopPropagation()
+  function recJump () {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      window.scroll(0, document.documentElement.scrollTop - 10);
+      setTimeout(recJump, 10);
+    }
   }
-  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-      window.scroll(0, 0);
-      setTimeout(jumpUp, 10);
-  }
+  recJump()
 }
 
-window.onscroll = function() {
+const jumpSmoothlyUp = (event) => {
+  event.stopPropagation()
+  let k = document.documentElement.scrollTop
+  const intervalId = setInterval(() => {
+    k -= 10
+    window.scroll(0, k)
+    console.log(k)
+    if (k <= 0) {
+      clearInterval(intervalId)
+    } 
+  }, 10)
+}
+
+const scrolling = () => {
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
   if (scrolled > 0) {
     document.querySelector("#upbutton").style.display = "block";
@@ -24,6 +38,8 @@ function attachEvent (event, handler, node) {
   };
 };
 
+
+attachEvent("scroll", scrolling, window)
 attachEvent("click", jumpUp, document.querySelector("#upbutton"))
 
 

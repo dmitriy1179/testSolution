@@ -1,16 +1,11 @@
-const jumpUp = (event) => {
-  event.stopPropagation()
-  function recJump () {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-      window.scroll(0, document.documentElement.scrollTop - 10);
-      setTimeout(recJump, 10);
-    }
+const jumpUp = () => {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    window.scroll(0, document.documentElement.scrollTop - 10);
+    setTimeout(jumpUp, 10);
   }
-  recJump()
 }
 
-const jumpSmoothlyUp = (event) => {
-  event.stopPropagation()
+const jumpSmoothlyUp = () => {
   let k = document.documentElement.scrollTop
   const intervalId = setInterval(() => {
     k -= 10
